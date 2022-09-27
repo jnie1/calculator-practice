@@ -1,0 +1,86 @@
+:root {
+  --text: hsl(255, 100%, 100%);
+  --display: hsl(202, 11%, 29%);
+  --background: hsl(207, 19%, 61%);
+  --number: hsl(210, 25%, 95%);
+  --operator: hsl(208, 25%, 86%);
+  --enter: hsl(357, 100%, 72%);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+  }
+} */
+
+.calc {
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15), 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin-block-start: 2em;
+  max-inline-size: 22rem;
+  overflow: hidden;
+  color: hsl(202, 11%, 29%);
+}
+
+.calc-display {
+  background: var(--display);
+  color: var(--text);
+  font-size: 2rem;
+  padding-block-start: 0.5rem;
+  padding-block-end: 0.5rem;
+  padding-inline-end: 0.75rem;
+  text-align: end;
+}
+
+.calc-keyboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1px;
+  background: var(--background);
+  padding: 0.5rem;
+}
+
+.calc-btn {
+  background: var(--number);
+  border: none;
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+  padding-inline-end: 1.25rem;
+  padding-inline-start: 1.25rem;
+  font-size: 1.5rem;
+
+  inline-size: 70px;
+  block-size: 70px;
+  margin: 0.25rem;
+  border-radius: 40px;
+}
+
+.calc-btn:hover,
+.calc-btn:active,
+.calc-btn:focus {
+  background-color: var(--enter);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3) inset;
+  outline: none;
+}
+
+.calc-btn-operator {
+  background: var(--operator);
+  color: black;
+}
+
+.calc-btn-clear {
+  grid-column: 1 / 3;
+  width: auto;
+}
+
+.calc-btn-enter {
+  grid-column: 3 / 5;
+  background: var(--enter);
+  width: auto;
+}
+
+.calc-btn-zero {
+  grid-column: 1 / 3;
+  width: auto;
+}
